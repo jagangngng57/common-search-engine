@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SearchEngineSuite" parallel="false">
+    <test name="GoogleSearchTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="searchEngineUrl" value="https://www.google.com"/>
+        <parameter name="searchTerms" value="Selenium,TestNG,Java"/>
+        <classes>
+            <class name="common.search.engine.SearchTests"/>
+        </classes>
+    </test>
+
+    <test name="BingSearchTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="searchEngineUrl" value="https://www.bing.com"/>
+        <parameter name="searchTerms" value="Automation,Web Testing,Framework"/>
+        <classes>
+            <class name="common.search.engine.SearchTests"/>
+        </classes>
+    </test>
+
+    <test name="YahooSearchTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="searchEngineUrl" value="https://search.yahoo.com"/>
+        <parameter name="searchTerms" value="Software Testing,QA,Continuous Integration"/>
+        <classes>
+            <class name="common.search.engine.SearchTests"/>
+        </classes>
+    </test>
+</suite>
